@@ -9,6 +9,7 @@ import {AboutComponent} from "./components/about/about.component";
 import {ArtistComponent} from "./components/artist/artist.component";
 import {SpotifyService} from "./services/spotify.service";
 import {RouterModule} from "@angular/router";
+import {AlbumComponent} from "./components/album/album.component";
 
 @NgModule({
     imports: [
@@ -19,7 +20,13 @@ import {RouterModule} from "@angular/router";
         RouterModule,
         routing],
     providers: [SpotifyService],
-    declarations: [ AppComponent, SearchComponent, AboutComponent, ArtistComponent ],
+    declarations: [
+        AppComponent,
+        SearchComponent,
+        AboutComponent,
+        ArtistComponent,
+        AlbumComponent
+    ],
     bootstrap: [ AppComponent ]
 })
 @Component({
