@@ -8,10 +8,10 @@
     "experimentalDecorators": true,
     "removeComments": false,
     "noImplicitAny": false,
-    "outDir": "../public/js/app"
+    "outDir": "../public/js/"
   },
   "files": [
-    "./assets/app/boot.ts"
+    "./app/boot.ts"
   ],
   "exclude": [
     "node_modules"

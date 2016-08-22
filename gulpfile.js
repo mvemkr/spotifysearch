@@ -6,18 +6,14 @@ var rename = require('gulp-rename');
 
 var del = require('del');
 
-var appDev = 'assets/app/';
-var appProd = 'public/js/app/';
+var appDev = 'app/';
+var appProd = 'public/js';
 var vendor = 'public/js/vendor';
 
 var tsconfig = gulpTypescript.createProject('tsconfig.json');
 
 gulp.task('build-ts', function() {
-    return gulp.src([
-            appDev + 'components/**/*.ts',
-            appDev + 'services/**/*.ts',
-            appDev + '*.ts'
-        ], {cwd: 'app'})
+    return gulp.src( appDev + '**/*.ts')
         .pipe(gulpSourcemaps.init())
         .pipe(gulpTypescript(tsconfig))
         .pipe(gulpSourcemaps.write())
@@ -26,11 +22,11 @@ gulp.task('build-ts', function() {
 
 gulp.task('build-copy', function() {
    return gulp.src([appDev + '**/*.html', appDev + '**/*.htm', appDev + '**/*.css'])
-       .pipe(gulp.dest(appProd));
+       .pipe(gulp.dest(appProd + '/app'));
 });
 
 gulp.task('clean', function() {
-   del(appProd + '/**/*');
+   del(appProd + '/app/**/*');
 });
 
 gulp.task('vendor', function() {
