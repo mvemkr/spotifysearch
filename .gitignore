@@ -1,0 +1,4 @@
+/assets/app/config/**
+/node_modules
+/public/js/app/**/*
+/public/js/vendor/**/*
