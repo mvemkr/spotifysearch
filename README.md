@@ -1,4 +1,4 @@
-Angular 2 RC5 and Node js Simple Github Service
+Angular 2 RC5 and Node js Simple Spotify API Service
 ===============================================
 
 ## Prerequisites
